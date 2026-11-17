@@ -1,0 +1,15 @@
+CandyHub Delivery — arquivos ajustados
+
+Conteúdo:
+- index.html: WhatsApp da confeitaria movido para o cadastro/edição da própria confeitaria.
+- script.js: favoritos aparecem na área Minha conta; checkout usa o WhatsApp salvo pela confeitaria; cliente pode registrar mais de um pedido sem bloqueio por pedido anterior.
+- candyhub_migracao.sql: SQL para coluna whatsapp_phone e tabela favoritos com políticas RLS.
+
+Passos:
+1. Faça backup dos arquivos atuais.
+2. Execute candyhub_migracao.sql no SQL Editor do Supabase.
+3. Substitua index.html e script.js no site pelos arquivos deste ZIP.
+4. Entre na área de parceiro e preencha/salve o WhatsApp da confeitaria.
+5. Teste favoritar/desfavoritar e visualizar favoritos; teste também dois pedidos em sequência.
+
+Observação: style.css e supabase-config.js não foram enviados e, por isso, não estão neste ZIP. Mantenha os arquivos existentes no projeto. Pedidos ainda são gravados inicialmente como status "recebido"; o ajuste remove a trava para o cliente registrar outro pedido.
